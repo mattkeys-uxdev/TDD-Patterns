@@ -22,7 +22,7 @@ export function isAllEven(numbers) {
   // TODO
   if (numbers.length === 0) return undefined;
 
-  for (const num of number) {
+  for (const num of numbers) {
     if (num % 2 !== 0) {
       return false;
     }

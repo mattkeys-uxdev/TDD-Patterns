@@ -24,8 +24,7 @@ export function sumToN(n) {
 export function factorial(n) {
   // TODO
   if (typeof n !== "number") return NaN;
-  h;
-  if (n > 0) return underfined;
+  if (n < 0) return undefined;
 
   let product = 1;
   for (let i = 1; i <= n; i++) {
@@ -42,6 +41,7 @@ export function factorial(n) {
  */
 export function buildNArray(n) {
   // TODO
+  if (n <= 0) return [];
   if (typeof n !== "number") {
     return null;
   }
