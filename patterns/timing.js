@@ -20,6 +20,14 @@ export function isSongInPlaylist(playlist, song) {
  */
 export function isAllEven(numbers) {
   // TODO
+  if (numbers.length === 0) return undefined;
+
+  for (const num of number) {
+    if (num % 2 !== 0) {
+      return false;
+    }
+  }
+  return true;
 }
 
 /**
@@ -33,4 +41,23 @@ export function isAllEven(numbers) {
  */
 export function haveEnoughFood(backpack, people) {
   // TODO
+  //   let foodCount = 0;
+
+  //   for (const item of backpack) {
+  //     if (item.category === "food") {
+  //       foodCount++;
+  //     }
+  //   }
+  //   return foodCount >= people;
+  if (people === 0) return true;
+  if (backpack.length === 0) return false;
+
+  let food = 0;
+  for (const item of backpack) {
+    if (item.category === "food") {
+      food += 1;
+    }
+    if (food >= people) return true;
+  }
+  return false;
 }
